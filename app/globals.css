@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --matte-green: #7BAA69;
+  --off-white: #F9F7F0;
+  --warm-brown: #8B5E3C;
+  --dark-gray: #4D4D4D;
+}
+
+body {
+  color: var(--dark-gray);
+  background-color: var(--off-white);
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: var(--warm-brown);
+}
+
+.btn-primary {
+  @apply bg-matte-green text-off-white px-6 py-3 rounded-md hover:bg-matte-green-dark transition-colors duration-300;
+}
+
+.btn-secondary {
+  @apply bg-warm-brown text-off-white px-6 py-3 rounded-md hover:bg-warm-brown-light transition-colors duration-300;
+}
+
+.section {
+  @apply py-16 px-4 md:px-8;
+}
+
+.container {
+  @apply max-w-[80%] mx-auto;
+}
+
+.card {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+}
